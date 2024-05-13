@@ -34,6 +34,16 @@ namespace CurseProject
             this.status = status;
         }
 
+        // Перевизначення віртуального методу для виведення полів класу
+        public override void DisplayFields()
+        {
+            base.DisplayFields(); // Викликаємо базовий метод для виведення полів батьківського класу
+            Console.WriteLine($"Тема дипломної роботи: {ThesisTopic}");
+            Console.WriteLine($"Терміни проходження практики: {InternshipPeriod}");
+            Console.WriteLine($"Дата захисту роботи: {DefenseDate}");
+            Console.WriteLine($"Стан виконання дипломної роботи: {Status}");
+        }
+
         // Властивості для доступу до полів
 
         // Властивість для теми дипломної роботи

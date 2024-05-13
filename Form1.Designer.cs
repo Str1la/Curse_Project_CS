@@ -193,6 +193,7 @@
             dateTimePicker.Name = "dateTimePicker";
             dateTimePicker.Size = new Size(205, 23);
             dateTimePicker.TabIndex = 15;
+            dateTimePicker.ValueChanged += dateTimePicker_ValueChanged;
             // 
             // comboBoxStatus
             // 

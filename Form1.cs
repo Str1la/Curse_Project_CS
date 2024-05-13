@@ -95,12 +95,13 @@ namespace CurseProject
             container.AddStudent(newStudent);
 
             // Додаємо дані студента до dataGridView
-            dataGridView1.Rows.Add(
+            /*dataGridView1.Rows.Add(
                 newStudent.Surname, newStudent.FirstName,
                 newStudent.MiddleName, newStudent.BirthYear,
                 newStudent.Specialty, newStudent.University,
                 newStudent.ThesisTopic, newStudent.InternshipPeriod,
-                newStudent.DefenseDate, newStudent.Status);
+                newStudent.DefenseDate, newStudent.Status);*/
+            RefreshDataGridView();
 
             // Очищаємо поля введення на формі
             ClearInputFields();
@@ -242,6 +243,11 @@ namespace CurseProject
                 "Проте ви це робите через посилання на базовий клас IEnumerable<GraduateStudent>, " +
                 "що дозволяє змінювати реалізацію методу RefreshDataGridView() у підкласі " +
                 "GraduateStudentContainer без необхідності змінювати його в самому класі форми.");
+        }
+
+        private void dateTimePicker_ValueChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

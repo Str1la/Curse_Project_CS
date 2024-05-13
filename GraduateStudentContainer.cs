@@ -22,7 +22,15 @@ namespace CurseProject
         // Метод для додавання студента до контейнера
         public void AddStudent(GraduateStudent student)
         {
-            students.Add(student);
+            if (student.BirthYear < 2024)
+            {
+                students.Add(student);
+            }
+            else
+            {
+                MessageBox.Show("Рік народження не може бути більшим за теперешній");
+            }
+            
         }
 
         // Метод для сортування дипломників за роком народження (за зростанням)

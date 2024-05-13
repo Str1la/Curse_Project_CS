@@ -28,6 +28,16 @@ namespace CurseProject
             this.university = university;
         }
 
+        public virtual void DisplayFields()
+        {
+            Console.WriteLine($"Прізвище: {Surname}");
+            Console.WriteLine($"Ім'я: {FirstName}");
+            Console.WriteLine($"По-батькові: {MiddleName}");
+            Console.WriteLine($"Рік народження: {BirthYear}");
+            Console.WriteLine($"Спеціальність: {Specialty}");
+            Console.WriteLine($"ВУЗ: {University}");
+        }
+
         // Властивості для доступу до полів
 
         // Властивість для прізвища
