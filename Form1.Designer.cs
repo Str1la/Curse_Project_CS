@@ -58,6 +58,8 @@
             label12 = new Label();
             label13 = new Label();
             label14 = new Label();
+            saveBtn = new Button();
+            loadBtn = new Button();
             ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
             ((System.ComponentModel.ISupportInitialize)numericUpDown).BeginInit();
             SuspendLayout();
@@ -274,9 +276,9 @@
             // 
             // filterByStatus
             // 
-            filterByStatus.Location = new Point(1170, 476);
+            filterByStatus.Location = new Point(1170, 188);
             filterByStatus.Name = "filterByStatus";
-            filterByStatus.Size = new Size(139, 76);
+            filterByStatus.Size = new Size(139, 30);
             filterByStatus.TabIndex = 25;
             filterByStatus.Text = "Скинути";
             filterByStatus.UseVisualStyleBackColor = true;
@@ -318,11 +320,33 @@
             label14.TabIndex = 29;
             label14.Text = "диплому";
             // 
+            // saveBtn
+            // 
+            saveBtn.Location = new Point(1171, 455);
+            saveBtn.Name = "saveBtn";
+            saveBtn.Size = new Size(138, 45);
+            saveBtn.TabIndex = 30;
+            saveBtn.Text = "Зберегти";
+            saveBtn.UseVisualStyleBackColor = true;
+            saveBtn.Click += saveBtn_Click;
+            // 
+            // loadBtn
+            // 
+            loadBtn.Location = new Point(1171, 506);
+            loadBtn.Name = "loadBtn";
+            loadBtn.Size = new Size(138, 45);
+            loadBtn.TabIndex = 31;
+            loadBtn.Text = "Загрузити";
+            loadBtn.UseVisualStyleBackColor = true;
+            loadBtn.Click += loadBtn_Click;
+            // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(1315, 564);
+            Controls.Add(loadBtn);
+            Controls.Add(saveBtn);
             Controls.Add(label14);
             Controls.Add(label13);
             Controls.Add(label12);
@@ -394,5 +418,7 @@
         private Label label12;
         private Label label13;
         private Label label14;
+        private Button saveBtn;
+        private Button loadBtn;
     }
 }
