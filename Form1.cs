@@ -232,5 +232,16 @@ namespace CurseProject
             // Оновлюємо dataGridView з відсортованими даними
             RefreshDataGridView();
         }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("У моєму проекті демонстрація пізнього зв'язування (late binding) відбувається " +
+                "при виклику віртуального методу RefreshDataGridView() в класі форми Form1. Коли ви " +
+                "викликаєте цей метод, він перевизначений в класі GraduateStudentContainer, " +
+                "і саме там відбувається фактичне викликання методів для оновлення dataGridView. " +
+                "Проте ви це робите через посилання на базовий клас IEnumerable<GraduateStudent>, " +
+                "що дозволяє змінювати реалізацію методу RefreshDataGridView() у підкласі " +
+                "GraduateStudentContainer без необхідності змінювати його в самому класі форми.");
+        }
     }
 }

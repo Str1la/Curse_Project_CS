@@ -61,6 +61,7 @@
             saveBtn = new Button();
             loadBtn = new Button();
             sortByName = new Button();
+            button3 = new Button();
             ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
             ((System.ComponentModel.ISupportInitialize)numericUpDown).BeginInit();
             SuspendLayout();
@@ -351,11 +352,22 @@
             sortByName.UseVisualStyleBackColor = true;
             sortByName.Click += sortByName_Click;
             // 
+            // button3
+            // 
+            button3.Location = new Point(1172, 349);
+            button3.Name = "button3";
+            button3.Size = new Size(139, 56);
+            button3.TabIndex = 33;
+            button3.Text = "Приклад пізнього звязування";
+            button3.UseVisualStyleBackColor = true;
+            button3.Click += button3_Click;
+            // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(1315, 564);
+            Controls.Add(button3);
             Controls.Add(sortByName);
             Controls.Add(loadBtn);
             Controls.Add(saveBtn);
@@ -433,5 +445,6 @@
         private Button saveBtn;
         private Button loadBtn;
         private Button sortByName;
+        private Button button3;
     }
 }
