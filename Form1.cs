@@ -26,7 +26,7 @@ namespace CurseProject
             comboBoxStatus.Items.AddRange(Enum.GetValues(typeof(ThesisStatus)).Cast<object>().ToArray());
             comboBoxStatus2.Items.AddRange(Enum.GetValues(typeof(ThesisStatus)).Cast<object>().ToArray());
 
-            container = new GraduateStudentContainer(new List<GraduateStudent> {/* student1, student2, student3, student4, student5*/ });
+            container = new GraduateStudentContainer(new List<GraduateStudent> {/*student1, student2, student3, student4, student5*/});
 
             dataGridView1.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
             dataGridView1.AllowUserToAddRows = false;
