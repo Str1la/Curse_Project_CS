@@ -60,6 +60,7 @@
             label14 = new Label();
             saveBtn = new Button();
             loadBtn = new Button();
+            sortByName = new Button();
             ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
             ((System.ComponentModel.ISupportInitialize)numericUpDown).BeginInit();
             SuspendLayout();
@@ -268,7 +269,7 @@
             // comboBoxStatus2
             // 
             comboBoxStatus2.FormattingEnabled = true;
-            comboBoxStatus2.Location = new Point(1170, 162);
+            comboBoxStatus2.Location = new Point(1171, 261);
             comboBoxStatus2.Name = "comboBoxStatus2";
             comboBoxStatus2.Size = new Size(139, 23);
             comboBoxStatus2.TabIndex = 24;
@@ -276,7 +277,7 @@
             // 
             // filterByStatus
             // 
-            filterByStatus.Location = new Point(1170, 188);
+            filterByStatus.Location = new Point(1171, 287);
             filterByStatus.Name = "filterByStatus";
             filterByStatus.Size = new Size(139, 30);
             filterByStatus.TabIndex = 25;
@@ -296,7 +297,7 @@
             // label12
             // 
             label12.AutoSize = true;
-            label12.Location = new Point(1170, 109);
+            label12.Location = new Point(1171, 206);
             label12.Name = "label12";
             label12.Size = new Size(85, 15);
             label12.TabIndex = 27;
@@ -305,7 +306,7 @@
             // label13
             // 
             label13.AutoSize = true;
-            label13.Location = new Point(1171, 124);
+            label13.Location = new Point(1172, 223);
             label13.Name = "label13";
             label13.Size = new Size(71, 15);
             label13.TabIndex = 28;
@@ -314,7 +315,7 @@
             // label14
             // 
             label14.AutoSize = true;
-            label14.Location = new Point(1171, 139);
+            label14.Location = new Point(1172, 238);
             label14.Name = "label14";
             label14.Size = new Size(56, 15);
             label14.TabIndex = 29;
@@ -340,11 +341,22 @@
             loadBtn.UseVisualStyleBackColor = true;
             loadBtn.Click += loadBtn_Click;
             // 
+            // sortByName
+            // 
+            sortByName.Location = new Point(1170, 109);
+            sortByName.Name = "sortByName";
+            sortByName.Size = new Size(139, 76);
+            sortByName.TabIndex = 32;
+            sortByName.Text = "Відсортувати студентів за Ім'ям";
+            sortByName.UseVisualStyleBackColor = true;
+            sortByName.Click += sortByName_Click;
+            // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(1315, 564);
+            Controls.Add(sortByName);
             Controls.Add(loadBtn);
             Controls.Add(saveBtn);
             Controls.Add(label14);
@@ -420,5 +432,6 @@
         private Label label14;
         private Button saveBtn;
         private Button loadBtn;
+        private Button sortByName;
     }
 }

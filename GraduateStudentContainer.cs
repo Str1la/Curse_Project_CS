@@ -31,6 +31,12 @@ namespace CurseProject
             students = students.OrderBy(s => s.BirthYear).ToList();
         }
 
+        // Метод для сортування дипломників за імям
+        public void SortByName()
+        {
+            students = students.OrderBy(s => s.FirstName).ToList();
+        }
+
         // Метод для фільтрування дипломників за статусом виконання дипломної роботи
         public void FilterByStatus(ThesisStatus status)
         {

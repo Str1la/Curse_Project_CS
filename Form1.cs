@@ -18,7 +18,7 @@ namespace CurseProject
         public Form1()
         {
             InitializeComponent();
-            
+
         }
 
         private void Form1_Load(object sender, EventArgs e)
@@ -222,6 +222,15 @@ namespace CurseProject
         private void loadBtn_Click(object sender, EventArgs e)
         {
             ReadFromFile(Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "students.txt"));
+        }
+
+        private void sortByName_Click(object sender, EventArgs e)
+        {
+            // Сортуємо студентів за імям
+            container.SortByName();
+
+            // Оновлюємо dataGridView з відсортованими даними
+            RefreshDataGridView();
         }
     }
 }
