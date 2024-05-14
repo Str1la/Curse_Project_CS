@@ -22,44 +22,7 @@ namespace CurseProject
         // Метод для додавання студента до контейнера
         public void AddStudent(GraduateStudent student)
         {
-            if (student.BirthYear > 2024)
-            {
-                MessageBox.Show("Рік народження не може бути більшим за теперешній");
-            }
-            else if (student.Surname != null)
-            {
-                MessageBox.Show("Не введено призвище");
-            }
-            else if (student.FirstName != null)
-            {
-                MessageBox.Show("Не введено ім'я");
-            }
-            else if (student.MiddleName != null)
-            {
-                MessageBox.Show("Не введено по батькові");
-            }
-            else if (student.Specialty != null)
-            {
-                MessageBox.Show("Не введено спеціальність");
-            }
-            else if (student.University != null)
-            {
-                MessageBox.Show("Не введено навчальний заклад");
-            }
-            else if (student.ThesisTopic != null)
-            {
-                MessageBox.Show("Не введено тему дипломної");
-            }
-            else if (student.InternshipPeriod != null)
-            {
-                MessageBox.Show("Не введено період проходження практики");
-            }
-
-            else
-            {
-                students.Add(student);
-            }
-            
+            students.Add(student);
         }
 
         // Метод для сортування дипломників за роком народження (за зростанням)
@@ -96,6 +59,7 @@ namespace CurseProject
         {
             return GetEnumerator(); // Повертаємо ітератор для елементів класу GraduateStudent
         }
+
     }
 
 }

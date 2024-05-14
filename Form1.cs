@@ -9,16 +9,9 @@ namespace CurseProject
     {
         GraduateStudentContainer container;
 
-        /*GraduateStudent student1 = new GraduateStudent("Хома", "Іван", "Олександрович", 1995, "Інформатика", "Київський університет", "Тема 1", "Літо 2024", DateTime.Now, ThesisStatus.Захищено);
-        GraduateStudent student2 = new GraduateStudent("Коваль", "Петро", "Іванович", 1996, "Історія", "Львівський університет", "Тема 2", "Весна 2024", DateTime.Now, ThesisStatus.Допущено);
-        GraduateStudent student3 = new GraduateStudent("Сімон", "Микола", "Васильович", 1994, "Фізика", "Одеський університет", "Тема 3", "Осінь 2024", DateTime.Now, ThesisStatus.ВПроцесі);
-        GraduateStudent student4 = new GraduateStudent("Ковальчук", "Анна", "Петрівна", 1997, "Хімія", "Дніпровський університет", "Тема 4", "Літо 2024", DateTime.Now, ThesisStatus.Узгодження);
-        GraduateStudent student5 = new GraduateStudent("Василенко", "Олег", "Михайлович", 1993, "Економіка", "Харківський університет", "Тема 5", "Весна 2024", DateTime.Now, ThesisStatus.Здано);*/
-
         public Form1()
         {
             InitializeComponent();
-
         }
 
         private void Form1_Load(object sender, EventArgs e)
@@ -43,7 +36,14 @@ namespace CurseProject
             dataGridView1.Columns.Add("DefenseDate", "Дата захисту");
             dataGridView1.Columns.Add("Status", "Статус виконання");
 
-            numericUpDown.Maximum = 2050;
+            numericUpDown.Maximum = 2024;
+            numericUpDown.Minimum = 2000;
+
+            // Встановлення мінімальної дати до поточної дати
+            dateTimePicker.MinDate = new DateTime(2020, 12, 31); 
+
+            // Встановлення максимальної дати до кінця поточного року
+            dateTimePicker.MaxDate = new DateTime(2025, 12, 31);
 
 
 
@@ -79,25 +79,37 @@ namespace CurseProject
 
         private void button2_Click(object sender, EventArgs e)
         {
-            GraduateStudent newStudent = new GraduateStudent(
-                TBsurname.Text,
-                TBfirstname.Text,
-                TBmiddlename.Text,
-                (int)numericUpDown.Value,
-                TBspeciality.Text,
-                TBuniversity.Text,
-                TBthesis.Text,
-                TBperid.Text,
-                dateTimePicker.Value,
-                (ThesisStatus)comboBoxStatus.SelectedItem);
+            GraduateStudent newStudent = new GraduateStudent();
+            try
+            {
+                newStudent.Surname = TBsurname.Text;
+                newStudent.FirstName = TBfirstname.Text;
+                newStudent.MiddleName = TBmiddlename.Text;
+                newStudent.BirthYear = (int)numericUpDown.Value;
+                newStudent.Specialty = TBspeciality.Text;
+                newStudent.University = TBuniversity.Text;
+                newStudent.ThesisTopic = TBthesis.Text;
+                newStudent.InternshipPeriod = TBperid.Text;
+                newStudent.DefenseDate = dateTimePicker.Value;
+                newStudent.Status = (ThesisStatus)comboBoxStatus.SelectedItem;
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message, "Некоректно введені дані", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
 
-            // Додаємо студента до контейнера
-            container.AddStudent(newStudent);
+            
+            if (newStudent != null)
+            {
+                // Додаємо студента до контейнера
+                container.AddStudent(newStudent);
 
-            RefreshDataGridView();
+                RefreshDataGridView();
 
-            // Очищаємо поля введення на формі
-            ClearInputFields();
+                // Очищаємо поля введення на формі
+                ClearInputFields();
+            }
         }
 
         private void ClearInputFields()
@@ -242,5 +254,7 @@ namespace CurseProject
         {
 
         }
+
+        
     }
 }
