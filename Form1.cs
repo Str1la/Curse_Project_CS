@@ -94,13 +94,6 @@ namespace CurseProject
             // Додаємо студента до контейнера
             container.AddStudent(newStudent);
 
-            // Додаємо дані студента до dataGridView
-            /*dataGridView1.Rows.Add(
-                newStudent.Surname, newStudent.FirstName,
-                newStudent.MiddleName, newStudent.BirthYear,
-                newStudent.Specialty, newStudent.University,
-                newStudent.ThesisTopic, newStudent.InternshipPeriod,
-                newStudent.DefenseDate, newStudent.Status);*/
             RefreshDataGridView();
 
             // Очищаємо поля введення на формі
