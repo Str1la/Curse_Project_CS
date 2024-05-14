@@ -37,52 +37,6 @@ namespace CurseProject
             this.status = status;
         }
 
-        // Конструктор копіювання
-        public GraduateStudent(GraduateStudent other) : base(other)
-        {
-            // Копіюємо значення всіх полів з іншого об'єкта GraduateStudent
-            ThesisTopic = other.ThesisTopic;
-            InternshipPeriod = other.InternshipPeriod;
-            DefenseDate = other.DefenseDate;
-            Status = other.Status;
-        }
-
-        // Перевантаження оператору виведення
-        public static void PrintGraduateStudentInfo(GraduateStudent student)
-        {
-            PrintStudentInfo(student); // Виводимо інформацію про студента (виклик методу базового класу)
-
-            Console.WriteLine($"Тема дипломної роботи: {student.ThesisTopic}");
-            Console.WriteLine($"Період практики: {student.InternshipPeriod}");
-            Console.WriteLine($"Дата захисту: {student.DefenseDate}");
-            Console.WriteLine($"Статус: {student.Status}");
-        }
-
-        // Перевантаження оператору введення
-        public static GraduateStudent ReadGraduateStudentInfo()
-        {
-            Console.WriteLine("Введіть інформацію про студента:");
-
-            Student baseStudent = ReadStudentInfo(); // Виклик методу базового класу
-
-            Console.Write("Введіть тему дипломної роботи: ");
-            string thesisTopic = Console.ReadLine();
-
-            Console.Write("Введіть період практики: ");
-            string internshipPeriod = Console.ReadLine();
-
-            Console.Write("Введіть дату захисту: ");
-            DateTime defenseDate = DateTime.Parse(Console.ReadLine());
-
-            Console.Write("Введіть статус: ");
-            string statusString = Console.ReadLine();
-            ThesisStatus status = (ThesisStatus)Enum.Parse(typeof(ThesisStatus), statusString);
-
-            return new GraduateStudent(baseStudent.Surname, baseStudent.FirstName, baseStudent.MiddleName,
-                                        baseStudent.BirthYear, baseStudent.Specialty, baseStudent.University,
-                                        thesisTopic, internshipPeriod, defenseDate, status);
-        }
-
         // Перевизначення віртуального методу для виведення полів класу
         public override void DisplayFields()
         {

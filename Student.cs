@@ -30,53 +30,6 @@ namespace CurseProject
             this.specialty = specialty;
             this.university = university;
         }
-        
-        // Конструктор копіювання
-        public Student(Student other)
-        {
-            // Копіюємо значення всіх полів з іншого об'єкта
-            Surname = other.Surname;
-            FirstName = other.FirstName;
-            MiddleName = other.MiddleName;
-            BirthYear = other.BirthYear;
-            Specialty = other.Specialty;
-            University = other.University;
-        }
-
-        // Перевантаження оператору виведення
-        public static void PrintStudentInfo(Student student)
-        {
-            Console.WriteLine($"Прізвище: {student.Surname}");
-            Console.WriteLine($"Ім'я: {student.FirstName}");
-            Console.WriteLine($"По-батькові: {student.MiddleName}");
-            Console.WriteLine($"Рік народження: {student.BirthYear}");
-            Console.WriteLine($"Спеціальність: {student.Specialty}");
-            Console.WriteLine($"Університет: {student.University}");
-        }
-
-        // Перевантаження оператору введення
-        public static Student ReadStudentInfo()
-        {
-            Console.Write("Введіть прізвище: ");
-            string surname = Console.ReadLine();
-
-            Console.Write("Введіть ім'я: ");
-            string firstName = Console.ReadLine();
-
-            Console.Write("Введіть по-батькові: ");
-            string middleName = Console.ReadLine();
-
-            Console.Write("Введіть рік народження: ");
-            int birthYear = int.Parse(Console.ReadLine());
-
-            Console.Write("Введіть спеціальність: ");
-            string specialty = Console.ReadLine();
-
-            Console.Write("Введіть університет: ");
-            string university = Console.ReadLine();
-
-            return new Student(surname, firstName, middleName, birthYear, specialty, university);
-        }
 
         public virtual void DisplayFields()
         {
