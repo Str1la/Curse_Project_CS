@@ -40,7 +40,12 @@ namespace CurseProject
         // Перевизначення віртуального методу для виведення полів класу
         public override void DisplayFields()
         {
-            base.DisplayFields(); // Викликаємо базовий метод для виведення полів батьківського класу
+            Console.WriteLine($"Прізвище: {Surname}");
+            Console.WriteLine($"Ім'я: {FirstName}");
+            Console.WriteLine($"По-батькові: {MiddleName}");
+            Console.WriteLine($"Рік народження: {BirthYear}");
+            Console.WriteLine($"Спеціальність: {Specialty}");
+            Console.WriteLine($"ВУЗ: {University}");
             Console.WriteLine($"Тема дипломної роботи: {ThesisTopic}");
             Console.WriteLine($"Терміни проходження практики: {InternshipPeriod}");
             Console.WriteLine($"Дата захисту роботи: {DefenseDate}");

@@ -33,12 +33,8 @@ namespace CurseProject
 
         public virtual void DisplayFields()
         {
-            Console.WriteLine($"Прізвище: {Surname}");
-            Console.WriteLine($"Ім'я: {FirstName}");
-            Console.WriteLine($"По-батькові: {MiddleName}");
-            Console.WriteLine($"Рік народження: {BirthYear}");
-            Console.WriteLine($"Спеціальність: {Specialty}");
-            Console.WriteLine($"ВУЗ: {University}");
+            Console.WriteLine($"Прізвище: {Surname}, Ім'я: {FirstName}, По-батькові: {MiddleName}, Рік народження: {BirthYear}, Спеціальність: {Specialty}, ВУЗ: {University}");
+            
         }
 
         // Перевірка на наявність непотрібних символів
