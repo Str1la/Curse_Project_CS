@@ -31,6 +31,17 @@ namespace CurseProject
             this.university = university;
         }
 
+        // Конструктор копіювання
+        public Student(Student other)
+        {
+            this.surname = other.surname;
+            this.firstName = other.firstName;
+            this.middleName = other.middleName;
+            this.birthYear = other.birthYear;
+            this.specialty = other.specialty;
+            this.university = other.university;
+        }
+
         public virtual void DisplayFields()
         {
             Console.WriteLine($"Прізвище: {Surname}, Ім'я: {FirstName}, По-батькові: {MiddleName}, Рік народження: {BirthYear}, Спеціальність: {Specialty}, ВУЗ: {University}");

@@ -37,6 +37,15 @@ namespace CurseProject
             this.status = status;
         }
 
+        // Конструктор копіювання
+        public GraduateStudent(GraduateStudent other) : base(other)
+        {
+            this.thesisTopic = other.thesisTopic;
+            this.internshipPeriod = other.internshipPeriod;
+            this.defenseDate = other.defenseDate;
+            this.status = other.status;
+        }
+
         // Перевизначення віртуального методу для виведення полів класу
         public override void DisplayFields()
         {
