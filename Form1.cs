@@ -2,6 +2,7 @@ using System.ComponentModel;
 using System.Windows.Forms;
 using System.Windows.Forms.VisualStyles;
 using System.Xml.Linq;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 
 namespace CurseProject
 {
@@ -18,6 +19,7 @@ namespace CurseProject
         {
             comboBoxStatus.Items.AddRange(Enum.GetValues(typeof(ThesisStatus)).Cast<object>().ToArray());
             comboBoxStatus2.Items.AddRange(Enum.GetValues(typeof(ThesisStatus)).Cast<object>().ToArray());
+            comboBoxStatus.SelectedIndex = 0;
 
             container = new GraduateStudentContainer(new List<GraduateStudent> {/*student1, student2, student3, student4, student5*/});
 

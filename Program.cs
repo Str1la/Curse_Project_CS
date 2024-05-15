@@ -8,6 +8,8 @@ namespace CurseProject
             ApplicationConfiguration.Initialize();
 
             Application.Run(new Form1());
+
+
             
         }
     }
